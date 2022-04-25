@@ -1,0 +1,12 @@
+var EmployeeName = "Amol";
+var EmployeeId = 57910;
+var EmployeeJob = "Citiustech";
+var IsPermanentEmployee = true;
+var EmployeeSalary = 786868;
+var EmployeeDepartmentNo = 768;
+console.log("EmployeeName : " + EmployeeName);
+console.log("EmployeeId : " + EmployeeId);
+console.log("EmployeeJob : " + EmployeeJob);
+console.log("IsPermanentEmployee : " + IsPermanentEmployee);
+console.log("EmployeeSalary : " + EmployeeSalary);
+console.log("EmployeeDepartmentNo : " + EmployeeDepartmentNo);
