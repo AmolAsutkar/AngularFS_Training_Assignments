@@ -1,0 +1,17 @@
+<p>product-details works!</p>
+<fieldset>
+    <legend>UProduct Details</legend>
+  
+    Product Name  : <input type="text" [(ngModel)]="prodname" />
+    <br/><br/>
+  
+    Product Price  : <input type="text" [(ngModel)]="prodprice" />
+    <br/><br/>
+
+    Product Quantity  : <input type="text" [(ngModel)]="qty" />
+    <br/><br/>
+  
+    <button (click)="calculate()">Get Total</button>
+    <span [style]="strcolor">Total Amount : {{amount}}</span>
+    
+  </fieldset>
