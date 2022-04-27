@@ -1,0 +1,15 @@
+<p>product-cards works!</p>
+<div class ="row">
+    <div *ngFor="let product of Productarray" class="column">
+        <div class="card">
+           <div class="container">
+            <h4><b> Product Id :{{product.pid}}</b></h4>
+            
+              <p> Product Name : {{product.pname}}</p>
+              <p>Price :{{product.price}}</p>
+              <p>Category: {{product.category}}</p>
+              <p>Quantity :{{product.qty}}</p>
+            </div>
+            </div>
+        </div> 
+    </div>
