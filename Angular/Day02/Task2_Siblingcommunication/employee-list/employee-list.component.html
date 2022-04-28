@@ -1,0 +1,28 @@
+<h1>Employee Details</h1>
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th> Job</th>
+      <th>Sal</th>
+      <th>DeptNo</th>
+    </tr>
+  
+    <tr *ngFor="let item of employeeArray">
+          
+        <td>{{item.empnumber}}</td>
+        <td>{{item.empname}}</td>
+        <td>{{item.empjob}}</td>
+        <td>{{item.empsal}}</td>
+        <td>{{item.empdept}}</td>
+       
+    
+       
+    </tr>
+  
+    <tr *ngIf="employeeArray.length == 0">
+      <td colspan="4">** No Employee avaialble in the database</td>
+    </tr>
+  
+  </table>
+
