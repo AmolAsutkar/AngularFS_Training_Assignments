@@ -1,8 +1,8 @@
 <div class="row">
-    <div *ngFor="let item of ProductArray" class="column">
-        <div *ngIf="item.category == category" class="card">
+    <div *ngFor="let item of filterProd" class="column">
+        
     
-            <div class="container">
+       <div class="container">
               <h4><b> Product Id :{{item.pid}}</b></h4>
               <p> Product Name : {{item.pname}}</p>
               <p>Price :{{item.price}}</p>
@@ -10,6 +10,6 @@
               
             </div>
           </div>
-     </div>
+     
  </div>
                                                                                                                 

@@ -9,24 +9,25 @@ import {Product } from '../model/Product';
 export class ProductlistComponent implements OnInit {
 
 
-  @Input()
-  category:string='';
+  @Input() cat:string ="";
+
 
   filterProd:Product[]=[];
   constructor() { }
 
   ngOnInit(): void {
-    this.filterProd = this.ProductArray.filter(item=>item.category == this.category);
+    alert(this.cat)
+    this.filterProd = this.ProductArray.filter(item1 => item1.category == this.cat);
 
   }
 
 
   ProductArray:Product[] = [
-    {pid :1, pname :"bed",price:5667,category:"category1"} ,
-    {pid :2, pname : "Television",price:5667,category:"category2"} ,
-    {pid :3, pname : "bat",price:5667,category:"category3"} ,
-    {pid :4, pname : "shirt",price:5667,category:"category4"} ,
-    {pid :5, pname : "shoes",price:5667,category:"category5"} 
+    {pid :1, pname :"bed",price:5667,category:"furniture"} ,
+    {pid :2, pname : "Television",price:5667,category:"electronics"} ,
+    {pid :3, pname : "bat",price:5667,category:"sports"} ,
+    {pid :4, pname : "shirt",price:5667,category:"clothes"} ,
+    {pid :5, pname : "shoes",price:5667,category:"footware"} 
 
   ];
 

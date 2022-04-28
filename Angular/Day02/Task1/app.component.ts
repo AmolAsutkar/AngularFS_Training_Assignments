@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
-  prodCat:string= "category1";
+  prodCat:string= "electronics";
+
 }
