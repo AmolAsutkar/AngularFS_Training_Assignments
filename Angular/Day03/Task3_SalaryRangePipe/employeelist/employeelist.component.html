@@ -1,0 +1,33 @@
+<p>employeelist works!</p>
+
+<h3>Working with Customize pipe in Angular</h3>
+<hr/>
+
+Starting Salary Range  : <input [(ngModel)]="startrange"/><br>
+     
+   Ending  Salary Range  :  <input [(ngModel)]="endrange"  /><br>
+
+<hr/>
+
+<button (click)="filterData_click()">Filter Data</button>
+
+
+<h3>Employee List</h3>
+
+<table width="500"  cellspacing="0"  cellpadding="3"  border="2">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th>Emp Job</th>
+      <th>Emp Salary</th>
+      <th>Emp Deptno</th>
+    </tr>
+  
+    <tr *ngFor="let item of empsArray | salarypipe : value1 : value2">
+        <td>{{item.empno}}</td>
+        <td>{{item.ename | titlecase}}</td>
+        <td>{{item.job | uppercase}}</td>
+        <td>{{item.sal}}</td>
+        <td>{{item.deptno}}</td>
+    </tr>
+  </table>
