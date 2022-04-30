@@ -1,0 +1,31 @@
+<h1 style="background-color:DodgerBlue;text-align: center;">  Employee Details</h1>
+<hr />
+
+   Employee Number : <input type="text" [(ngModel)]="empno" placeholder="Employee Number" />
+   Employee Name   : <input type="text" [(ngModel)]="empname" placeholder="Employee Name" />
+   Employee Job    :<input type="text" [(ngModel)]="empjob" placeholder="Employee Job" />
+   Employee Salary :<input type="text" [(ngModel)]="empsal" placeholder="Employee Salary" /><br><br>
+   Employee dept   :<input type="text" [(ngModel)]="empdept" placeholder="Employee dept"/>
+
+   <button (click)="addEmployee_click()">Add Data</button>
+   <button (click)="removeEmployee_click()">Remove Data</button>
+
+
+   <hr />
+   <table width="500" cellspacing="0" cellpadding="3" border="2">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th>Emp Salary</th>
+      <th>Emp JOB</th>
+      <th>Emp Department</th>
+    </tr>
+  
+    <tr *ngFor="let item of empscomponentArray">
+      <td>{{ item.empsnumber}}</td>
+      <td>{{ item.empsname | titlecase }}</td>
+      <td>{{ item.empssalary | currency }}</td>
+      <td>{{ item.empsjobtitle | uppercase }}</td>
+      <td>{{ item.empsdepartment | lowercase }}</td>
+    </tr>
+  </table>
