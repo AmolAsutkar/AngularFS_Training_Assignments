@@ -1,0 +1,132 @@
+<p>productlist works!</p>
+<style>
+    .bg1{ background-color :  lightblue;  }
+    .bg2{ background-color :  lightgreen;  }
+    .bg3{ background-color :  pink;  }
+  
+    .c1
+    {
+      color : dodgerblue;
+      border:1px solid dodgerblue;
+      width :  100px;
+      margin : 5px;
+      float : left;
+      text-align : center;
+      background-color : white;
+    }
+  
+    .c2
+    {
+       background-color: dodgerblue;
+       color : white;
+       margin: 0px;
+    }
+  
+  </style>
+
+
+
+ <div>
+     Display Mode :  <img   (mouseover)="Image_Click('list')"   src="assets/list.png" width="20" height="20"/> &nbsp;
+      <img   (mouseover)="Image_Click('small')"   src="assets/small.png" width="20" height="20"/> 
+     &nbsp;<img (mouseover)="Image_Click('big')" src="assets/large.png" width="20" height="20"/> &nbsp;
+     <img (mouseover)="Image_Click('other')"  src="assets/table.png" width="20" height="20" />
+ </div>
+
+
+ 
+
+
+  
+<section  [ngSwitch]="displayMode">
+
+    <!-- Content for List Mode -->
+      <article *ngSwitchCase="'list'">
+
+        <table border="2" width="400" cellspacing="0" cellpadding="5">
+            <tr >
+              <th>Product Id</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Picture</th>
+            </tr>
+          
+            <tr *ngFor="let item of productArr;  let isEven = even; let isOdd = odd;" [ngClass]="{'bg2':isEven, 'bg3':isOdd}">
+                <td>{{item.pname}}</td>
+                <td>{{item.pname}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.qty}}</td>
+                <td><img width="35" height="35" src="{{item.picture}}"/></td>
+            </tr>
+    
+          
+          </table>
+      </article>
+
+
+      <article *ngSwitchCase="'small'">
+
+        <div class="row">
+            <div *ngFor="let item of productArr" class="column">
+                <div  class="card" >
+            
+                    <div class="c1">
+                      <h4><b> Product Id :{{item.pid}}</b></h4>
+                      <p> Product Name : {{item.pname}}</p>
+                      <p>Price :{{item.price}}</p>
+                      <p>Category: {{item.category}}</p>
+                      <p>Quantity :{{item.qty}}</p>
+                      <p>picture :<img width="15" height="15" src="{{item.picture}}"/></p>
+                    </div>
+                  </div>
+             </div>
+         </div>
+      </article>
+
+
+      <article *ngSwitchCase="'big'">
+        <div class="row">
+            <div *ngFor="let item of productArr" class="column">
+                <div  class="card" >
+            
+                    <div class="c1">
+                      <h4><b> Product Id :{{item.pid}}</b></h4>
+                      <p> Product Name : {{item.pname}}</p>
+                      <p>Price :{{item.price}}</p>
+                      <p>Category: {{item.category}}</p>
+                      <p>Quantity :{{item.qty}}</p>
+                      <p>picture :<img width="35" height="35" src="{{item.picture}}"/></p>
+                    </div>
+                  </div>
+             </div>
+         </div>
+        
+      </article>
+      <article *ngSwitchCase="'other'">
+
+        <table border="2" width="400" cellspacing="0" cellpadding="5">
+            <tr >
+              <th>Product Id</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Picture</th>
+            </tr>
+          
+            <tr *ngFor="let item of productArr;  let isEven = even; let isOdd = odd;" [ngClass]="{'bg2':isEven, 'bg3':isOdd}">
+                <td>{{item.pname}}</td>
+                <td>{{item.pname}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.qty}}</td>
+                <td><img width="35" height="35" src="{{item.picture}}"/></td>
+            </tr>
+    
+          
+          </table>
+      </article>
+</section>
