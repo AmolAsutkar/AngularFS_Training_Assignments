@@ -1,0 +1,17 @@
+<table width="500" cellspacing="0" cellpadding="3" border="2" align="center">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th>Emp Salary</th>
+      <th>Emp JOB</th>
+      <th>Emp Department</th>
+    </tr>
+  
+    <tr *ngFor="let item of emparray">
+      <td>{{ item.empsnumber}}</td>
+      <td>{{ item.empsname }}</td>
+      <td>{{ item.empssalary}}</td>
+      <td>{{ item.empsjobtitle}}</td>
+      <td>{{ item.empsdepartment }}</td>
+    </tr>
+  </table>
