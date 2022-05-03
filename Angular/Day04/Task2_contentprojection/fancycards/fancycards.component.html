@@ -1,0 +1,29 @@
+<html>
+<head>
+    
+
+<style>
+div {
+    border: 12px solid bisque;
+    padding: 20px 40px 60px 30px;
+    background-color: rgb(122, 211, 233);
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    font-size: 25px;
+</style>
+</head>
+<body>
+    <div>
+        <ng-content select="[top]"></ng-content>
+
+<div>           
+     <ng-content></ng-content>
+</div>
+<ng-content select="[bottom]"></ng-content>
+
+
+</div>
+</body>
+</html>
