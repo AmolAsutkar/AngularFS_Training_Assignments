@@ -1,0 +1,47 @@
+<style>
+    div {
+      background-color: rgb(248, 241, 241);
+      width: 300px;
+      border: 15px solid rgb(245, 247, 245);
+      /* padding: 50px; */
+      margin: 20px;
+      margin-left: 500px;
+      align :center;
+    }
+    
+    h2{
+        align: center;
+    }
+    </style>
+    
+    
+    <h2> Todo Task</h2>
+    
+    <div>
+      
+        <input type="text"  [(ngModel)]="inputItem"  placeholder="Add Todo"  /> &nbsp; <br><br>
+        <button (click)="addNew_click()">Add New Task</button>&nbsp;
+    
+    </div>
+    
+    
+    
+    <h2>Todo List</h2>
+    
+    <div *ngFor="let item of todoListObj; let i = index;">
+        <span [ngStyle]="{ 'color': (item.isDone == true ? 'Red' : ''), 'text-decoration-line':(item.isDone == true ? 'line-through' : 'none')}">{{item.itemName}}</span>&nbsp;&nbsp;
+     
+          <input type="checkbox" [(ngModel)]="item.isDone" />
+        <a  (click)="delete_click(item.id)" href="javascript:void(0);">
+            <img src="assets/delete.png" alt="" width="20" />
+          </a>&nbsp;
+          
+          <a  (click)="update_click()" href="javascript:void(0);">
+              <img src="assets/update.png" alt="" width="20" />
+            </a>
+           
+        
+    </div>
+    <button (click)="DeleteDone_click()">Delete Done Task</button>&nbsp;
+    <button (click)="DeleteAll_click()">Delete All Task</button>&nbsp;<br><br><br>
+    
