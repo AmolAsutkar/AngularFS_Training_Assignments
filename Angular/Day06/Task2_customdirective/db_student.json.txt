@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "sid": 1,
+      "sname": "Sai Krishna",
+      "sdept": "EEE",
+      "sloc": "Elupuru"
+    },
+    {
+      "sid": 2,
+      "sname": "Ganesh",
+      "sdept": "CSE",
+      "sloc": "Mannarpolur"
+    },
+    {
+      "sid": 3,
+      "sname": "Pavan",
+      "sdept": "ECE",
+      "sloc": "Nellore"
+    },
+    {
+      "sid": 4,
+      "sname": "Rakesh",
+      "sdept": "MECH",
+      "sloc": "Alluru"
+    }
+  ]
+}
