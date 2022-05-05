@@ -1,8 +1,0 @@
-{
-	  "employee": 
-	   [
-		{ "empno":10, "ename": "Amol", "job":"Engineer","sal":5000,"deptno":6},
-		{ "empno": 20, "ename": "Akash", "job": "Doctor","sal":1000,"deptno":7},
-		{ "empno": 30, "ename": "Mhesh", "job": "Teacher","sal":7000,"deptno":9}    
-	  ]
-	} 
