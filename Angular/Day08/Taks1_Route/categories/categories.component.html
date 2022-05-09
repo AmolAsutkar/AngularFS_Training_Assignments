@@ -1,0 +1,23 @@
+<p>categories works!</p>
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+    <tr>
+        <th>Product Id</th>
+
+        <th>Product Name</th>
+        
+
+
+    </tr>
+
+    <tr *ngFor="let item of productArr;">
+        <td>{{item.pid}}</td>
+
+        <td>{{item.pname}}</td>
+        
+
+        <td><a [routerLink]=" ['/details', item.pid] ">Details</a></td>
+        
+    </tr>
+
+
+</table>

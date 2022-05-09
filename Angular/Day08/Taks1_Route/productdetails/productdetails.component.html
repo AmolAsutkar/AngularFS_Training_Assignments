@@ -1,0 +1,18 @@
+<p>productdetails works!</p>
+<div class="row">
+    <div *ngFor="let item of productArr" class="column">
+        <div  class="card">
+    
+            <div class="container">
+              <h4><b> Product Id :{{item.pid}}</b></h4>
+              <p> Product Name : {{item.pname}}</p>
+              <p>Price :{{item.price}}</p>
+              <p>Category: {{item.category}}</p>
+              <p>Quantity :{{item.qty}}</p>
+            </div>
+          </div>
+     </div>
+ </div>
+
+ <hr>
+<a [routerLink]=" ['/categories'] ">Back to Category</a>

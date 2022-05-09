@@ -1,0 +1,15 @@
+<h3> Login </h3>
+<hr/>
+
+<fieldset>
+    <legend>User Login</legend>
+  
+    User Id  : <input type="text" [(ngModel)]="UserName" />
+    <br/><br/>
+  
+    Password  : <input type="password" [(ngModel)]="Password" />
+    <br/><br/>
+  
+    <button [disabled]="isDisabled"  (click)="login_click()">Login</button>
+    <p> {{result}} </p>
+  </fieldset>
