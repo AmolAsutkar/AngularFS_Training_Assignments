@@ -1,0 +1,28 @@
+<style>
+    .login-box{
+      /* display: flex;  */
+      align-items: center; 
+      justify-content: center;
+    }</style>
+    
+    <mat-card class="login-box" >
+      <mat-card-title>Login</mat-card-title>
+      <br /><br />
+      <mat-card-content>
+        <mat-form-field type="text" class="example-full-width" appearance="fill">
+    
+          <input matInput placeholder="Username" required>
+        </mat-form-field>
+      
+        <br /><br />
+        <mat-form-field type="password" class="example-full-width" appearance="fill">
+          <input matInput placeholder="Password" required>
+      
+        </mat-form-field>
+      
+        <br /><br />
+      
+        <button mat-raised-button color="primary" (click)="login_click()">Login</button>
+      </mat-card-content>
+      
+    </mat-card>
