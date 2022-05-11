@@ -1,0 +1,15 @@
+<p>employeedetails works!</p>
+<table border="2" width="200">
+    <tr>
+        <th>Employee No</th>
+        <th>Employee Name</th>
+        <th>Performance grade</th>
+
+    </tr>
+    <tr *ngFor="let emp of EmployeeArray">
+        <td>{{emp.empno}}</td>
+        <td>{{emp.empname}}</td>
+        <td>{{emp.performancegrade | grade}}</td>
+
+    </tr>
+ </table>
