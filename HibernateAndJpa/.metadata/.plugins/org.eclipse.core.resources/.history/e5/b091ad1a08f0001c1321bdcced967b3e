@@ -1,0 +1,48 @@
+package com.citiustech.servicetest;
+
+import org.junit.jupiter.api.Test;
+
+import com.citiustech.entity.Account;
+import com.citiustech.service.BlockBusterService;
+
+public class TestAccountService {
+
+	@Test
+	public void testOpenAccount() {
+		BlockBusterService accservice=new BlockBusterService(); 
+		Account account=new Account();
+		account.setAccname("asutkar");
+		account.setBalance(8000);
+		account.setType("Current");
+		
+		accservice.openAccount(account);
+	}
+	
+	@Test
+	public void testWithdraw() {
+		BlockBusterService accservice=new BlockBusterService();
+		accservice.withdraw(4,4000);
+		
+		
+	}
+	@Test
+	public void testDeposit() {
+		BlockBusterService accservice=new BlockBusterService();
+		accservice.deposit(3,2000);		
+	}
+	
+	@Test
+	public void testTransfer() {
+		BlockBusterService accservice=new BlockBusterService();
+		accservice.transfer(1,2,1000);
+		
+		
+	}
+	@Test
+	public void testbalanceCheck() {
+		BlockBusterService accservice=new BlockBusterService();
+		accservice.balanceCheck(1);
+		System.out.println(accservice.balanceCheck(1));
+	}
+	
+}
