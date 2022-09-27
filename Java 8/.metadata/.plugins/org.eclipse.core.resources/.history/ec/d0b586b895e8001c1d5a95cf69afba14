@@ -1,0 +1,51 @@
+package com.citiustech;
+
+import java.time.LocalDate;
+
+import com.opencsv.bean.CsvBindByName;
+
+public class ComplaintPojo {
+	
+	@CsvBindByName(column = "Received date")
+	private String dateReceived;
+	
+	@CsvBindByName(column = "Product")
+	private String product;
+	
+	@CsvBindByName(column = "Sub-product")
+	private String subProduct;
+	
+	@CsvBindByName(column = "Issue")
+	private String issue;
+	
+	@CsvBindByName(column = "Sub-issue")
+	private String subIssue;
+	
+	@CsvBindByName(column = "Company")
+	private String company;
+	
+	@CsvBindByName(column = "State")
+	private String state;
+	
+	@CsvBindByName(column = "ZIP code")
+	private String zipCode;
+	
+	@CsvBindByName(column = "Submitted via")
+	private String submittedVia;
+	
+	@CsvBindByName(column = "Date closed")
+	private String dateClosed;
+	
+	@CsvBindByName(column = "Company response to consumer")
+	private String companyResponse;
+
+	@CsvBindByName(column = "Timely response?")
+	private String timelyResponse;
+	
+	@CsvBindByName(column = "Consumer disputed?")
+	private String consumerDisrupted;
+	
+	@CsvBindByName(column = "Complaint ID")
+	private String complaintId;
+
+}

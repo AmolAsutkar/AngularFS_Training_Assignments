@@ -1,0 +1,25 @@
+package com.citiustech.service;
+
+import com.citiustech.entity.Customer;
+import com.citiustech.repository.CustomerRepository;
+
+public class CustomerService {
+	
+	CustomerRepository customerrepository;
+	
+	public CustomerService(CustomerRepository customerrepository) {
+		super();
+		this.customerrepository = customerrepository;
+	}
+
+	
+	
+public Status registerCustomer(Customer customer) {
+	if(customerrepository.isCustomerPresent(customer.getEmail())
+			return Status.FAILURE;
+	
+}
+public static enum Status{
+	SUCCESS,FAILURE
+}
+}

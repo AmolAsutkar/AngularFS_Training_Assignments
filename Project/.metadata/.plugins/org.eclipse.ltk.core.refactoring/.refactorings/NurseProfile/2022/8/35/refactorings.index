@@ -1,0 +1,14 @@
+1661253497756	Rename type 'AppoinmentController'
+1661311955365	Rename type 'PatientsVitals'
+1661311982770	Rename type 'PatientsVitalsImpl'
+1661313685208	Rename type 'SchedulingConstant'
+1661313827806	Rename type 'SchedulingResponseDTO'
+1661313850760	Delete element
+1661313858675	Delete element
+1661313888317	Delete element
+1661313904308	Delete element
+1661313981061	Delete element
+1661313993259	Delete element
+1661314001265	Delete element
+1661314508854	Rename package 'com.medigenie.scheduleappoinment.repository'
+1661314534733	Rename package 'com.medigenie.scheduleappoinment.service'

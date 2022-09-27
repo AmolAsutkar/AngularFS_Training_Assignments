@@ -1,0 +1,16 @@
+package com.citiustech.test;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+public class SimpleMockitoTest {
+	
+	@Test
+	void test() {
+		
+		ArrayList<String>  mocklist=Mockito.mock(ArrayList.class);
+	}
+
+}

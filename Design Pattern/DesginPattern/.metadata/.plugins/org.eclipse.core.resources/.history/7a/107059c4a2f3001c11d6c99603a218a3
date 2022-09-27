@@ -1,0 +1,8 @@
+package factorysingleton;
+
+public class SavingsAccount {
+
+	public void withdraw(double amount) {
+		System.out.println("Withdraw from Savings");
+	}
+}

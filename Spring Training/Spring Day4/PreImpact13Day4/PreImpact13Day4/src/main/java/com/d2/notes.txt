@@ -1,0 +1,7 @@
+1. xml based configuration
+2. how to specify bean
+3. how does we can use stereotype annotations 
+
+
+From this demo we will see how we can completely remove xml file and
+this configuration is called as Java Based Configuration

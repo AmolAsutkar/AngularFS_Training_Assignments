@@ -1,0 +1,5 @@
+package com.medigenie.model;
+
+public class User {
+
+}

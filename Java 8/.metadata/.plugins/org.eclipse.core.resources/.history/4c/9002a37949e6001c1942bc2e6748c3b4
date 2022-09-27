@@ -1,0 +1,26 @@
+package com.citiustech.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class lifeCycle {
+
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("before all test cases");
+	}
+	@AfterAll
+    public static void afterAll() {
+		System.out.println("after all test cases");
+
+    }
+	@BeforeEach
+    public static void beforeEach() {
+		System.out.println("before each test cases");
+
+    }
+}

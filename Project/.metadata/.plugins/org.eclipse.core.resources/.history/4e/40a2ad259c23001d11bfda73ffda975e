@@ -1,0 +1,29 @@
+package com.citiustech.dto;
+
+import java.util.Date;
+
+import com.citiustech.enums.Status;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserDTO {
+
+	private Long id;
+	private String title;
+    private String firstName;
+    private String lastName;
+    private Date dateOfBirth;
+    private Status status;
+    private String email;
+    private String employeeID;
+    private String mobileNumber;
+    private int wrongAttempt;
+    private boolean isFirstLogin;
+	private String gender;
+	private String specialization;
+}

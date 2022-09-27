@@ -1,0 +1,14 @@
+package com.citiustech.service;
+
+import com.citiustech.entity.Customer;
+import com.citiustech.repository.CustomerRepository;
+
+public class CustomerService {
+	
+	CustomerRepository customerrepository;
+	
+public void registerCustomer(Customer customer) {
+	
+	
+}
+}

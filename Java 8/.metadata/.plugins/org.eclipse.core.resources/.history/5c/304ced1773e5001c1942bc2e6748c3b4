@@ -1,0 +1,31 @@
+package com.citiustech.lsp.bad;
+
+public class LSP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Logger logger =new Logger();
+logger.log("some code");
+logger.clear();
+	}
+
+}
+class Logger{
+	void log(String msg) {
+		System.out.println("loggers log method");
+	}
+	void clear() {
+		System.out.println("loggers clear method");
+	}
+}
+
+class FileLogger extends Logger{
+	
+	void log(String msg) {
+		System.out.println("Fileloggers log method");
+	}
+	void clear() {
+		System.out.println("Fileloggers clear method");
+	}
+	
+}

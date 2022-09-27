@@ -1,0 +1,25 @@
+package com.citiustech.test;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import org.mockito.Mockito;
+
+public class SimpleMockitoTest {
+	
+	@Test
+	void test() {
+		
+		ArrayList<String>  mocklist=Mockito.mock(ArrayList.class);
+		mocklist.add("java");
+		mocklist.add("python");
+		mocklist.add("c++");
+		//assert.equals(3,mocklist.size());
+		assertEquals(3,mocklist.size());
+		
+		
+	}
+
+}

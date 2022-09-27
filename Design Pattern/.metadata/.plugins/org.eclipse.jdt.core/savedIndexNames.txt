@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\AmolA3\Desktop\Pre Impact Training\Design Pattern\.metadata\.plugins\org.eclipse.jdt.core
+150945298.index
+89686527.index
+1499560031.index
+4223191744.index

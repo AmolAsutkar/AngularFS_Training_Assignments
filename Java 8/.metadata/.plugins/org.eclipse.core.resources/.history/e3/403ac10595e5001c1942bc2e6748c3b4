@@ -1,0 +1,16 @@
+package com.citiustech.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.citiustech.code.Calculator;
+
+class CalculatorTest {
+
+	@Test
+	void testAdd() {
+		Calculator c=new Calculator();
+	}
+
+}

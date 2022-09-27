@@ -1,0 +1,13 @@
+package com.citiustech;
+
+import java.time.LocalDate;
+
+public class ComplaintPojo {
+	public LocalDate Date_received;
+	public String Product;
+	public String Company;
+	public LocalDate Date_closed;
+	public int Complaint_ID;
+
+
+}

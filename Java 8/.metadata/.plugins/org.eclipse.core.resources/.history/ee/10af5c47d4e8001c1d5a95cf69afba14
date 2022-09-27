@@ -1,0 +1,50 @@
+package com.citiustech.main;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.List;
+import java.util.Scanner;
+
+import com.citiustech.entity.Complaint;
+import com.opencsv.bean.CsvToBeanBuilder;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		boolean isValid=true;
+		Scanner sc=new Scanner(System.in);
+		while (isValid) {
+			
+	    System.out.println("Menu : ");
+		System.out.println("enter your choice");
+        System.out.println("Type any number between 1 and 5");
+        System.out.println("1)Create a new student");
+        System.out.println("2)details specific student");
+        System.out.println("3)details of all students");
+        System.out.println("4)details of the student age details");
+        System.out.println("5)Exit");
+        int choice = sc.nextInt(); 
+        
+        if(choice==1) {
+        	System.out.println("enter id");
+        }
+        else if (choice==2) {
+        	System.out.println("enter id of ");
+
+		}
+        else if (choice==3) {
+        	System.out.println("enter id of ");
+
+		}
+        else if (choice==4) {
+        	System.out.println("enter id of ");
+
+		}
+        else if (choice==5) {
+          System.out.println("Thanks for exist");
+          isValid=false;
+          }
+	}
+}
+}

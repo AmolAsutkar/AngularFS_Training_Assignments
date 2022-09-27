@@ -1,0 +1,13 @@
+package com.citiustech.test;
+
+import org.junit.jupiter.api.Test;
+
+public class CustomerTest {
+	
+	@Test
+	public void registermethod_ShouldbeSuccessful() {
+		
+	}
+	
+
+}

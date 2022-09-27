@@ -1,0 +1,46 @@
+package com.citiustech;
+
+import java.time.LocalDate;
+
+public class ComplaintPojo {
+	
+	public String Product;
+	public String Company;
+	public LocalDate Date_closed;
+	public int Complaint_ID;
+	public LocalDate Date_received;
+	
+	public LocalDate getDate_received() {
+		return Date_received;
+	}
+	public void setDate_received(LocalDate date_received) {
+		Date_received = date_received;
+	}
+	public String getProduct() {
+		return Product;
+	}
+	public void setProduct(String product) {
+		Product = product;
+	}
+	public String getCompany() {
+		return Company;
+	}
+	public void setCompany(String company) {
+		Company = company;
+	}
+	public LocalDate getDate_closed() {
+		return Date_closed;
+	}
+	public void setDate_closed(LocalDate date_closed) {
+		Date_closed = date_closed;
+	}
+	public int getComplaint_ID() {
+		return Complaint_ID;
+	}
+	public void setComplaint_ID(int complaint_ID) {
+		Complaint_ID = complaint_ID;
+	}
+	
+
+
+}

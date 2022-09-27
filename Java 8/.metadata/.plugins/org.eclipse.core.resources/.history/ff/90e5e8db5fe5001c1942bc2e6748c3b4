@@ -1,0 +1,10 @@
+package com.citiustec.srp.good;
+
+public class SingleResponsibilityPrinciplee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

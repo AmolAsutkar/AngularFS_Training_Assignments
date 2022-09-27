@@ -1,0 +1,18 @@
+package com.citiustech.repository;
+
+import com.citiustech.entity.Customer;
+
+// assumption we are using jdbc or hibernate
+
+public class CustomerRepository {
+// code for firing select query
+	public boolean isCustomerPresent(String email) {
+		if(email.equals("amol.asutkar@gmail.com"))
+		return false;
+		
+	}
+	public int saveCustomer(Customer customer) {
+		return 0;
+		
+	}
+}

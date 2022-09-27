@@ -1,0 +1,36 @@
+package observerpattern;
+
+class Order{
+	int orderNo;
+	String customerId;
+	int productNo;
+	int quantity;
+}
+
+class GridData{
+	
+	public void updateGrid() {
+		System.out.println("Grid updated");
+	}
+}
+
+class GraphData{
+	
+	public void updateGraph() {
+		System.out.println("Graph updated");
+	}
+}
+
+public class ObserverPatternTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+

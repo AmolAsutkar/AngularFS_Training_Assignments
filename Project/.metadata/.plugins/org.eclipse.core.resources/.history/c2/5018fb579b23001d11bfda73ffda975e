@@ -1,0 +1,24 @@
+package com.citiustech.dto;
+
+import java.util.Date;
+
+import com.citiustech.enums.AppointmentStatus;
+
+import lombok.Data;
+
+@Data
+public class AppointmentDTO {
+
+	private long userId;
+	private long physicianId;
+	private String meetingtitle;
+	private String description;
+	private Date appoinmentDate;
+	private String time;
+	private String reason;
+	private String physicianname;
+	private String firstname;
+	private String lastname;
+	private AppointmentStatus status;
+	private String patientName;
+}

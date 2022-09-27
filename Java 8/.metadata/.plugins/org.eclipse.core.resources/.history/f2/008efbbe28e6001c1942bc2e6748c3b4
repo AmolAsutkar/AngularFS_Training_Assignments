@@ -1,0 +1,5 @@
+package com.citiustech.code;
+
+public class BMIException {
+
+}

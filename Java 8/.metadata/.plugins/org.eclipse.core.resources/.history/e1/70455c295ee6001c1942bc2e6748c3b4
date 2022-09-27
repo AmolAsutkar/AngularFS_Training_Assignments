@@ -1,0 +1,11 @@
+package com.citiustech.test.suite;
+
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.platform.suite.api.Suite;
+
+//@Suite  // to run all the test cases in below packages
+
+@SelectPackages("com.citiustech.test")
+public class MyTestSuite {
+
+}

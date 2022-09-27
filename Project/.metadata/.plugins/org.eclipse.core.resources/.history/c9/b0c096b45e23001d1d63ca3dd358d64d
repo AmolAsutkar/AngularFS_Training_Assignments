@@ -1,0 +1,5 @@
+package com.medigenie.scheduleappoinment.service;
+
+public class PatientsVitalsServiceImpl {
+
+}

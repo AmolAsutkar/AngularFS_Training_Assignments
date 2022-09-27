@@ -1,0 +1,27 @@
+package com.citiustech.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.citiustech.code.BMI;
+
+class BMITest3 {
+
+	@Test
+	void CalcutateBMI_ShouldReturn_ExceptedValue() {
+		//given
+		
+		double weight=70;
+		double height=1.7;
+		
+		//when
+		double actual=BMI.calculateBmi(height, weight);
+		
+				//then
+         double excepted=24;
+		assertEquals(actual, excepted);
+
+	}
+
+}

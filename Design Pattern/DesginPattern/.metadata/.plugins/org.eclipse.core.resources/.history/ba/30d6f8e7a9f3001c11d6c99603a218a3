@@ -1,0 +1,52 @@
+package factorysingleton;
+
+public class BankTest {
+
+	private static void tax(Account s) {
+		System.out.println("Tax paid");
+	}
+	
+	private static void payAnnualInterest(Account[] accounts) {
+		//Only add interest to Savings Account
+		for (Account account : accounts) {
+			if (account instanceof SavingsAccount) {
+				SavingsAccount sacc = (SavingsAccount) account;
+				sacc.addInterest(12);
+			}else if(account instanceof EmployeeAccount) {
+				EmployeeAccount eacc = (EmployeeAccount) account;
+				eacc.addInterest(12);
+			}
+		}
+	}
+	
+	/*
+	private static void tax(CurrentAccount s) {
+		System.out.println("Tax paid");
+	}
+	*/
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		SavingsAccount sa = new SavingsAccount();
+		sa.deposit(7000);
+		sa.withdraw(2000);
+		tax(sa);
+		
+		CurrentAccount ca = new CurrentAccount();
+		ca.deposit(7000);
+		ca.withdraw(2000);
+		tax(ca);
+		*/
+		Account[] accounts = new Account[3];
+		accounts[0] = new SavingsAccount();
+		accounts[1] = new CurrentAccount();
+		accounts[2] = new EmployeeAccount();
+		
+		payAnnualInterest(accounts);
+	}
+
+}
+
+
+

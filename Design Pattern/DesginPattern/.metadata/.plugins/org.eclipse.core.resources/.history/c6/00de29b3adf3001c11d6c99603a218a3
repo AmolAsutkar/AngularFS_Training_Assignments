@@ -1,0 +1,13 @@
+package factorysingleton;
+
+public class BankerSingleton {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BankerSingleton bs1 = new BankerSingleton();
+		BankerSingleton bs2 = new BankerSingleton();
+		System.out.println(bs1);
+		System.out.println(bs2);
+	}
+
+}

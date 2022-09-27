@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.d2.Employee" name="emp">
+	<property name="employee_name" value="Simon" />
+	<property name="phones">
+		<list>
+			<value>12345</value>
+			<value>54321</value>
+			<value>67890</value>
+		</list>
+	</property>
+	<property name="address">
+		<set>
+		<value>Mumbai</value>
+		<value>Delhi</value>
+		</set>
+	</property>
+	<property name="department">
+		<map>
+			<entry key="101"  value=" l and D"></entry>
+			<entry key="102"  value="HR"></entry>
+			<entry key="103"  value="Testing"></entry>
+		</map>
+	</property>
+	
+	</bean>
+
+</beans>  

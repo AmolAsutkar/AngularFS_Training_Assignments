@@ -1,0 +1,21 @@
+package factorysingleton;
+
+public class BankTest {
+
+	private static void tax(SavingsAccount s) {
+		System.out.println("Tax paid");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SavingsAccount sa = new SavingsAccount();
+		sa.deposit(7000);
+		sa.withdraw(2000);
+		
+		CurrentAccount ca = new CurrentAccount();
+		ca.deposit(7000);
+		ca.withdraw(2000);
+	}
+
+}

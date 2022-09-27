@@ -1,0 +1,81 @@
+package com.medigenie.model;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import org.hibernate.annotations.CreationTimestamp;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+
+
+@Entity
+@Table(name = "tbl_user")
+public class User {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+
+	@Column(name = "first_name")
+	private String firstName;
+
+	@Column(name = "last_name")
+	private String lastName;
+
+	@Column(name = "date_of_birth")
+	private Date dateOfBirth;
+
+	@Column(name = "title")
+	private String title;
+	
+	//@ManyToMany(fetch = FetchType.EAGER)
+	//@Fetch(value = FetchMode.SUBSELECT)
+	//@JoinTable(name = "user_roles",
+	//			joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+	//			inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
+	//			)
+	//private Set<Role> roles = new HashSet<>();
+ 
+	//@Enumerated(EnumType.STRING)
+	//private Status status;
+
+	private String email;
+	private String password;
+	
+	@Column(name = "employee_id")
+	private String employeeID;
+	@Column(name = "mobile_number")
+	private String mobileNumber;
+	
+	private int wrongAttempt;
+	private boolean isFirstLogin = true;
+	private String forgotPasswordOTP;
+	
+	@CreationTimestamp
+	@Column(name = "created_at", nullable = false, updatable = false)
+	private Date createdAt;
+	
+	private String specialization;
+	private String gender;
+	
+	 @Column(name = "password_expiry_date")
+	private LocalDate passwordExpiryDate;
+	
+
+}

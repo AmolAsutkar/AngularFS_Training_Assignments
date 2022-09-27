@@ -1,0 +1,33 @@
+package com.citiustech.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import ds.MySqlDataSource;
+import ds.OracleDataSource;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.function.Executable;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import javax.sql.DataSource;
+
+class TestRegionalDao {
+
+	@Test
+    public void regionalDaoMangerShouldBeTrue() {
+
+        DataSource dataSource = regionalDaoManager.getRegionalDao(Region.TOKYO).getDataSource();
+        assertNotNull(dataSource);
+
+         dataSource = regionalDaoManager.getRegionalDao(Region.LONDON).getDataSource();
+        assertNotNull(dataSource);
+
+        dataSource = regionalDaoManager.getRegionalDao(Region.NEWYORK).getDataSource();
+        assertNotNull(dataSource);
+
+
+    }
+
+}

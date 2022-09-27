@@ -1,0 +1,44 @@
+package com.citiustech.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.citiustech.code.BMI;
+import com.citiustech.code.Person;
+
+class BMITest {
+
+	@Test
+	void testIsDietingRecomendedShould_ReturnFalse() {
+		//given
+    Person p=new Person(70,1.7);
+    //when
+    boolean recommended=BMI.isDietingRecomended(p);
+    //then
+    assertFalse(recommended);
+    
+}
+	@Test
+	void testIsDietingRecomendedShould_ReturnTrue() {
+		//given
+    Person p=new Person(80,1.7);
+    //when
+    boolean recommended=BMI.isDietingRecomended(p);
+    //then
+    assertTrue(recommended);
+    
+}
+	
+	@Test
+	void testIsDietingRecomendedShould_Throwbmiexception() {
+		//given
+    Person p=new Person(0,1.7);
+    //when
+    boolean recommended=BMI.isDietingRecomended(p);
+    //then
+    assertTrue(recommended);
+    
+}
+
+}

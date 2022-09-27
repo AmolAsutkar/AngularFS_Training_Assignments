@@ -1,0 +1,9 @@
+package com.medigenie.scheduleappoinment.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.medigenie.model.PatientVitals;
+
+public interface PatientVitalRepo extends JpaRepository<PatientVitals, Long> {
+
+}

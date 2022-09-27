@@ -1,0 +1,19 @@
+package com.citiustech.Service;
+
+import java.util.List;
+
+import com.citiustech.entity.Complaint;
+import com.citiustech.fileparser.CsvLoader;
+
+public class ComplaintServices {
+	CsvLoader csvloader=new CsvLoader();
+	
+	List<Complaint> complist=csvloader.loadFile();
+	
+	public List<Complaint> fetchComplaintById(int complaint_id) {
+		return complist;
+	
+		//return list
+				
+}
+}

@@ -1,0 +1,24 @@
+package com.citiustec.srp.bad;
+
+public class SingleResponsibilityPrinciple2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class LoginService{
+	private String LoggedINUser="";
+	
+	public void loginUser(String username,String password) {
+		String hash=hashPassword(password);
+		if(userExistinDB(username,hash))
+			LoggedINUser=username;
+	}
+	
+	public void logout() {
+		LoggedINUser="";
+	}
+	
+}

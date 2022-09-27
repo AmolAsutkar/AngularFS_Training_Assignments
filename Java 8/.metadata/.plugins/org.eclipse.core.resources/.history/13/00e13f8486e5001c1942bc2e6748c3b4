@@ -1,0 +1,21 @@
+package com.citiustech.interfacesegrigation.bad;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+interface CustomerService{
+	
+	public void login();
+	public void register();
+	public void logout();
+	public void updateProfile();
+	public void suscribe();
+	public void placeOrder();
+	public void cancelOrder();
+
+}

@@ -1,0 +1,26 @@
+Adaptor pattern:
+	Is used to convert interface of a class into another a class into another.
+
+Decorator pattern:
+	Is used  to add new functionalities to an existing object without modifying
+	its original structure.
+
+
+-------------------------------------------------------------------
+
+Iterator pattern:
+	It allows a standard mechanism to access elements sequentially.	
+
+Proxy pattern:
+	It allows an object to represent another object.
+
+Chain of responsibility
+	It is used when you want to achieve loose coupling in software design  where
+	a request from the client is passed to a chain of object to process the data.
+	
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+package proxypattern;
+
+public class ProxyDesginPattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

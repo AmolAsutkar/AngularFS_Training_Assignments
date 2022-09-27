@@ -1,0 +1,20 @@
+package com.citiustech.code;
+
+public class BMI {
+
+	
+	public static double calculateBmi(Person p) {
+double height=p.getHeight();
+double weight=p.getWeight();
+double bmi=weight/(height*height);
+return Math.round(bmi);
+	}
+	
+public static boolean isDietingRecomended(Person p) {
+	double bmi=calculateBmi(p);
+	if(bmi<25)
+		return false;
+	else
+		return false;
+}
+}

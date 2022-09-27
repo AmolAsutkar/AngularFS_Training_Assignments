@@ -1,0 +1,19 @@
+package com.citius.dateandtime;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class DateTimeDemo {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your DOJ yy--mm-dd");
+		String doj=sc.nextLine();
+		
+		LocalDate dateofjoining=LocalDate.parse(doj);//yy--mm-dd
+		System.out.println(dateofjoining);
+				
+	}
+
+}

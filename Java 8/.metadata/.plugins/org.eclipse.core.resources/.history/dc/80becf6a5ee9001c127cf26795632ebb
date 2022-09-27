@@ -1,0 +1,28 @@
+package com.citiustech.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.citiustech.entity.Complaints;
+import com.citiustech.fileload.loadFile;
+
+
+public class ServiceComplaint {
+	
+	loadFile loadfile=new loadFile();
+	List<Complaints> complist=loadfile.loadCsvFile();
+	
+
+	public Complaints fetchComplaintById(int complaint_id) {
+		
+		
+		return complist
+				.stream()
+				.filter(s-> s.getComplaintId().equals(Integer.toString(complaint_id))).findAny().orElse(null);
+			
+		}
+	
+	public List<Complaints> fetchAllComplaintYearBased(int year) {
+		
+	}
+}

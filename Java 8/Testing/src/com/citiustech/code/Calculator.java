@@ -1,0 +1,22 @@
+package com.citiustech.code;
+
+public class Calculator {
+
+	//public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		public int add(int x,int y) {
+			try {
+				Thread.sleep(2000);
+			}
+			catch (Exception e) {
+e.printStackTrace();
+			}
+			return x+y;
+		}
+		public int sub(int x,int y) {
+			return x-y;
+		}
+	}
+
+

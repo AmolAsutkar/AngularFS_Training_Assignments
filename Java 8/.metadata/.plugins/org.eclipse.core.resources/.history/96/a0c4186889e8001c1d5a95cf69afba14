@@ -1,0 +1,48 @@
+package com.citiustech;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Complaints {
+
+	static List<String> list ;
+
+	public static void main(String[] args) {
+		Complaints com=new Complaints();
+		String complaints = "src//complaints.csv";
+		 list = new ArrayList<>();
+
+		try (BufferedReader br = Files.newBufferedReader(Paths.get(complaints))) {
+			//br returns as stream and convert it into a List
+			list = br.lines().collect(Collectors.toList());
+			System.out.println("yoh");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	
+		//list.forEach(System.out::println);
+		
+		com.fetchRecordByComplaintID();
+	}
+	
+  public  List fetchRecordByComplaintID() {
+	  
+	  System.out.println("list in fetch-----------------------");
+	  System.out.println("list in fetch-----------------------");
+	  System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
+	  System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
+	  System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
+	  System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
+
+	//	list.forEach(System.out::println);
+
+	  return list;
+			  
+  }
+}

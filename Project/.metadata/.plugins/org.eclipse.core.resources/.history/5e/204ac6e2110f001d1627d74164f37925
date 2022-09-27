@@ -1,0 +1,37 @@
+package com.citiustech.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.medigenie.model.Appoinment;
+import com.medigenie.scheduleappoinment.service.AppoinmentService;
+
+@Controller
+public class AppoinmentController {
+    
+	@Autowired
+	AppoinmentService appoinmentservice;
+	
+	@PostMapping("/save")
+	public void saveAppoinment(@RequestBody Appoinment appoinment) {
+		appoinmentservice.saveAppoinment(appoinment);
+	}
+	
+	@GetMapping("/save1")
+	public String saveAppoinment1() {
+     return "yugukhijgj";
+	}
+	
+	@GetMapping("/get")
+	public List<Appoinment> seeAllAppoinment() {
+		return appoinmentservice.fetchAllAppoinment();
+	}
+	
+}

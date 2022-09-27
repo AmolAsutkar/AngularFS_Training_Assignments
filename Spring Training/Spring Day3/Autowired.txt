@@ -1,0 +1,21 @@
+1. xml base autowiring
+2. annotation base autowiring
+
+xml base autowiring
+1. <bean class="" name="" autowire="byName">
+2. <bean class="" name="" autowire="byType">
+3. <bean class="" name="" autowire="constructor">
+
+annotation base autowiring
+1. we will have to enable annotation by
+adding  <context:annotation-config></context:annotation-config>
+2. @Autowired using which we can implement autowiring
+3. @Autowired can be used on top Object
+4. @Autowired can be put on top setter method
+5. @Autowired can be put on top constructor
+
+if there will be multiple beans and we have to 
+inject selected one then by using
+@Qualifier() annotation we can achieve this.
+Syntax:
+@Qualifier("nameOfBean")

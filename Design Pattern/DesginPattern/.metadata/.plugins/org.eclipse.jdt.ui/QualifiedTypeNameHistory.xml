@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="factorysingleton.CurrentAccount"/>
+<fullyQualifiedTypeName name="factorysingleton.EmployeeAccount"/>
+<fullyQualifiedTypeName name="factorysingleton.SavingsAccount"/>
+<fullyQualifiedTypeName name="factorysingleton.Profitable"/>
+<fullyQualifiedTypeName name="factorysingleton.Banker"/>
+<fullyQualifiedTypeName name="factorysingleton.Bank"/>
+<fullyQualifiedTypeName name="factorysingleton.BankerSingleton"/>
+<fullyQualifiedTypeName name="observerpattern.GridData"/>
+<fullyQualifiedTypeName name="observerpattern.GraphData"/>
+<fullyQualifiedTypeName name="observerpattern.OrderObserver"/>
+</qualifiedTypeNameHistroy>

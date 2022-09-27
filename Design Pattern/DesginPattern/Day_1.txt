@@ -1,0 +1,40 @@
+				Design Patterns
+
+1) What are design patterns:
+	A general repeatable solution to a commonly occuring problem, it describes how
+	to solve a problem that can be used in many different situations.
+
+2) Uses:
+	a) Speed up the development process
+	b) It improves code readability
+
+3) Types of design patterns:
+	a) Creational:
+		Used for class instantiation
+	b) Structural:
+		Used for class and object composition
+	c) Behavioral:
+		Used for class object communication
+
+
+Creational
+1) Abstract Factory:
+	Create an instance of several families of classes.
+2) Builder:
+	Seperates object construction from its representation.
+3) Factory:
+	Creates an instance of several derived classes.
+4) Object pool:
+	Avoid expensive acquisition and release of resources by recycling objects
+	that are no longer in use.
+5) Prototype:
+	A fully initialized instance to copied or clone.
+6) Singleton:
+	A class of which only a single instance can exists.
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SavingsAccount.java&apos; to &apos;factorysingleton.SavingsAccount.java&apos;&#x0D;&#x0A;- Original project: &apos;FactoryDesignPattern&apos;&#x0D;&#x0A;- Destination element: &apos;factorysingleton.SavingsAccount.java&apos;&#x0D;&#x0A;- Original element: &apos;factorysingleton.SavingsAccount.java&apos;" description="Copy compilation unit" destination="/src&lt;factorysingleton{SavingsAccount.java" element1="/src&lt;factorysingleton{SavingsAccount.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1656064241053" units="1" version="1.0"/>
+</session>

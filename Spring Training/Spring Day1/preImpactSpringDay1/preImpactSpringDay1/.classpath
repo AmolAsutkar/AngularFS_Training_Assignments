@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/aspectjweaver-1.9.7.jar"/>
+	<classpathentry kind="lib" path="jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="jars/spring-aop-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-aop-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-aspects-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-beans-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-beans-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-context-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-context-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-context-indexer-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-core-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-core-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-expression-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-expression-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-instrument-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-jcl-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-jdbc-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-jms-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-messaging-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-orm-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-tx-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-web-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-web-5.3.15.jar"/>
+	<classpathentry kind="lib" path="jars/spring-webmvc-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="lib" path="jars/spring-webmvc-portlet-4.3.30.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

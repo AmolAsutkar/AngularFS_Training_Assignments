@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.d4.Student" name="stud1">
+	<constructor-arg name="student_name" value="John"/>
+	</bean>
+	
+	<bean class="com.d4.Address" name="add1">
+	<constructor-arg name="city" value="Mumbai" />
+	<constructor-arg name="state" value="Maharashtra" />
+	<constructor-arg name="country" value="India" />
+	</bean>
+	
+	<bean class="com.d4.Employee" name="emp1">
+	<constructor-arg name="employee_name" value="Eric" />
+	<constructor-arg name="employee_phone" value="123456" />
+	<constructor-arg name="address" ref="add1" />
+	
+	
+	</bean>
+
+</beans>  

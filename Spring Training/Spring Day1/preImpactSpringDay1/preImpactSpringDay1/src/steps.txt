@@ -1,0 +1,6 @@
+1. create message class as bean
+2. we will have to create a configuration  -- (xml)
+3. once configuration file is ready 
+4. specify the bean class
+
+Note-- Here we are doing inject object using Setter injection

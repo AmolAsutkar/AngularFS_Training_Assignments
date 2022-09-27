@@ -1,0 +1,16 @@
+package com.citius.dateandtime;
+
+import java.util.Scanner;
+
+public class DateTimeDemo {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your DOJ");
+		String doj=sc.next();
+		
+				
+	}
+
+}

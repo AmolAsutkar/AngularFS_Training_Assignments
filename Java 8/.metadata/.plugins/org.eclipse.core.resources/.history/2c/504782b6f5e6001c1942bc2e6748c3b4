@@ -1,0 +1,32 @@
+package com.citiustech.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.citiustech.entity.Customer;
+
+// assumption we are using jdbc or hibernate
+
+public class CustomerRepository {
+	private List<Customer> customers;
+	
+	
+	public CustomerRepository() {
+		
+		customers=new ArrayList<Customer>();
+		customers.add(new Customer(111, "amol", "amol.asutkar@gmail.com"));
+		customers.add(new Customer(222, "asutkar", "asutkar.sun@gmail.com"));
+		customers.add(new Customer(333, "ajya", "ajya.@gmail.com"));
+
+				
+	}
+	public boolean isCustomerPresent(String email) {
+		if(email.equals("amol.asutkar@gmail.com"))
+		return false;
+		
+	}
+	public int saveCustomer(Customer customer) {
+		return 0;
+		
+	}
+}

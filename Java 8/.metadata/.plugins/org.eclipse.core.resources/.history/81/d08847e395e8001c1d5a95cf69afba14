@@ -1,0 +1,73 @@
+package com.citiustech;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Complaints {
+
+	static List<ComplaintPojo> list ;
+
+	public static void main(String[] args) {
+		Complaints com=new Complaints();
+		String complaints = "src//complaints.csv";
+		 list = new ArrayList<>();
+
+		try (BufferedReader br = Files.newBufferedReader(Paths.get(complaints))) {
+			//br returns as stream and convert it into a List
+			list = br.lines().collect(Collectors.toList());
+			System.out.println("yoh");
+			
+			//list.add(ComplaintPojo);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	
+		//list.forEach(System.out::println);
+		
+		//com.fetchRecordByComplaintID();
+	}
+	
+	/*
+	 * public List<String> fetchRecordByComplaintID() { return list
+	 * 
+	 * .stream() .map(list::) .forEach(System.out::println);
+	 * 
+	 * //list.forEach(System.out::println); }
+	 */
+}
+
+private List<ComplaintObj> getCustDetails(String file) {
+List<ComplaintObj> custList =null;
+Path pathToFile=Paths.get(file);
+try{
+BufferedReader br=Files.newBufferedReader(pathToFile);
+String row=br.readLine();
+while(row!=null){
+String[] attributes=row.split(",");
+ComplaintObj complaint=getoneDetails(attributes);
+custList.add(complaint);
+}
+}catch(IOException e)
+{
+e.printStackTrace();
+}
+return custList;
+
+}
+
+
+
+private ComplaintObj getoneDetails(String[] attributes) {
+String Subproduct=attributes[1];
+ComplaintObj complaint=new ComplaintObj();
+return complaint;
+
+}
+}

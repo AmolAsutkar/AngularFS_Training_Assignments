@@ -1,0 +1,10 @@
+package com.citiustech.code;
+
+public class BMI {
+
+	
+	public static double calculateBmi(Person p) {
+		
+	}
+
+}

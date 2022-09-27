@@ -1,0 +1,10 @@
+package com.citiustec.srp.bad;
+
+public class SingleResponsibilityPrinciple {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

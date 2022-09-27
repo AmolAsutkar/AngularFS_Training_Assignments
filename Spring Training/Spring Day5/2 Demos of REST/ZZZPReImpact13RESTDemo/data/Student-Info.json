@@ -1,0 +1,10 @@
+{
+	"id": 101,
+	"first_name": "John",
+	"last_name": "DSouza",
+	"address": {
+		"city": "Mumbai",
+		"state": "Maharashtra"
+	},
+	"teacher":["Johnson","James"]
+}

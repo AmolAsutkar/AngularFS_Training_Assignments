@@ -1,0 +1,13 @@
+there’s a limitation to autowiring by type. What happens if Spring finds more than
+ one bean whose type is assignable to the autowired property? In such a case, Spring
+ isn’t going to guess which bean to autowire and will instead throw an exception. 
+Consequently, you’re allowed to have only one bean configured that matches the 
+autowired property.
+
+To overcome ambiguities with autowiring by type, Spring offers two options: you can either 
+identify a primary candidate for autowiring or you can eliminate beans from autowiring candidacy.
+
+1. primary="true"
+2. autowire-candidate="false"
+
+add them in respective beans...........

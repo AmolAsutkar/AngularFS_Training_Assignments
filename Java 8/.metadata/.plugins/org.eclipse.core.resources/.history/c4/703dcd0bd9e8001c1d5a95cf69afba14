@@ -1,0 +1,14 @@
+package com.citiustech.Service;
+
+import java.util.List;
+
+import com.citiustech.entity.Complaint;
+
+public class ComplaintServices {
+
+	
+	public List<Complaint> fetchComplaintById(int complaint_id) {
+	
+		return 
+}
+}

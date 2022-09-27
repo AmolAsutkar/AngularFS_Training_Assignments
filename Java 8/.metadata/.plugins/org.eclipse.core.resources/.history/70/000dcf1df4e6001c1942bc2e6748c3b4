@@ -1,0 +1,15 @@
+package com.citiustech.repository;
+
+import com.citiustech.entity.Customer;
+
+public class CustomerRepository {
+
+	public boolean isCustomerPresent(String email) {
+		return false;
+		
+	}
+	public int saveCustomer(Customer customer) {
+		return 0;
+		
+	}
+}

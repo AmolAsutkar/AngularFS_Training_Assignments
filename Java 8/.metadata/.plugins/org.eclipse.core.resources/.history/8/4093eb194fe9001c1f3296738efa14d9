@@ -1,0 +1,10 @@
+package com.citiustech.fileload;
+
+public class loadFile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,56 @@
+package com.citiustech.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.citiustech.enums.AppointmentStatus;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name="appointment")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Appointment {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	
+	@Column(name="patient_id")
+	private long userId;
+	
+	@Column(name="physician_id")
+	private long physicianId;
+	
+	@Column(name="meeting_title")
+	private String meetingTitle;
+	
+	@Column(name="appoinment_date")
+    private Date appoinmentDate ;
+	
+    @Column(name="time")
+	private String time;
+
+	@Column(name="physician_name")
+    private String physicianName;
+	
+	@Column(name = "patient_name")
+	private String patientName;
+	
+	@Column(name = "appointment_status")
+	@Enumerated(EnumType.STRING)
+	private AppointmentStatus status;
+
+}

@@ -1,0 +1,21 @@
+Create a Bean 
+Student which will have following attributes
+1. Student Roll Number
+2. Student Name
+3. Student English Marks
+4. Student History Marks
+5. Student Geography Marks
+6. Student Maths Marks
+You have to calculate the percentage of Student and then
+check whether student is passed or Failed and at last 
+Display as below
+Ex:-
+
+Name of Student = Rakshit
+Roll number= 007
+English Marks = 90
+History Marks =90
+Geography Marks =90
+Maths Marks =90
+Percentage= 90
+Result = Passed

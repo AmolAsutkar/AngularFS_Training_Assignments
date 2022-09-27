@@ -1,0 +1,34 @@
+package com.citiustech.service;
+
+import com.citiustech.entity.Customer;
+import com.citiustech.repository.CustomerRepository;
+
+public class CustomerService {
+	
+	CustomerRepository customerrepository;
+	
+	public CustomerService(CustomerRepository customerrepository) {
+		super();
+		this.customerrepository = customerrepository;
+	}
+
+	
+// assumption developer has done mistake instead of throwing exception he has returning status  object in case of failure
+public Status registerCustomer(Customer customer) {
+	if(customerrepository.isCustomerPresent(customer.getEmail()))
+			return Status.FAILURE;
+	else {
+		try {
+			int id =customerrepository.saveCustomer(customer);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return Status.SUCCESS;
+	}
+	
+}
+public static enum Status{
+	SUCCESS,FAILURE
+}
+}

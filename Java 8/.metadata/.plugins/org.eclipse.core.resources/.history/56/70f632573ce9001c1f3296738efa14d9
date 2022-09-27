@@ -1,0 +1,10 @@
+package com.citiustech.entity;
+
+public class Complaint {
+
+	public Object getComplaintId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

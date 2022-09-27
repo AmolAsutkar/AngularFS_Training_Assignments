@@ -1,0 +1,20 @@
+package com.citiustech.test;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+
+public class SomeTest {
+
+	@Test
+	public void testCase1() {
+	}
+	
+	@Test
+	public void testCase2() {
+	}
+	
+	@Test
+	public void testCase3() {
+	}
+}

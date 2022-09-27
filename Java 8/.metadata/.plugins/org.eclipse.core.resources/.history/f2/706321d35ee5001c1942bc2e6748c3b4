@@ -1,0 +1,26 @@
+package com.citiustec.srp.bad;
+
+public class SingleResponsibilityPrinciple {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Employee{
+	
+	public double calculateMonthlySalary() {
+		return 0;
+		
+	}
+	
+    public double calculateMonthlyTimesheet() {
+		return 0;
+		
+	}
+    public void saveChanges() {
+    	
+    }
+}

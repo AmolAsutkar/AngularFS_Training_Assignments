@@ -1,0 +1,20 @@
+package com.citiustech.main;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.List;
+import java.util.Scanner;
+
+import com.citiustech.entity.Complaint;
+import com.opencsv.bean.CsvToBeanBuilder;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		Scanner sc=new Scanner(System.in);
+		
+	}
+
+}
