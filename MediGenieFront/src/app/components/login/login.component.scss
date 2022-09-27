@@ -1,0 +1,28 @@
+
+.card {
+    margin: 5% auto;
+    width: 450px;
+    text-align: center;
+}
+.example-row {
+    margin: 0px 20px 20px 0px;
+}
+
+.form-container {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 48px;
+    border-radius: 16px;
+}
+
+.form-container mat-form-field {
+    width: 100px;
+}
+
+.logo {
+    background-image:url('/assets/images/home.png');
+    height: 470px;
+    width: 1270px;
+    margin: 0 auto;
+}

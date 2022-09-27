@@ -1,0 +1,63 @@
+
+    <mat-sidenav-container color="primary">
+    
+        <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+      
+          <h4 class="name">Nathaniel Richards</h4>
+          <p class="designation">Admin, CT Hospital</p>
+      
+          <mat-divider></mat-divider>
+      
+          <button mat-button class="menu-button" routerLink="/adminProfile">
+            <mat-icon>account_circle</mat-icon>
+            <span> Profile</span>
+          </button>
+      
+          <mat-divider></mat-divider>
+      
+          <button mat-button class="menu-button"  routerLink="/getPatient">
+            <mat-icon>personal_injury</mat-icon>
+            <span> Patients</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button" routerLink="/getPhysician">
+            <mat-icon>local_hospital</mat-icon>
+            <span> Physicians</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button" routerLink="/getNurse">
+            <mat-icon>medication</mat-icon>
+            <span> Nurses</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button" routerLink="/createUser">
+            <mat-icon>person_add</mat-icon>
+            <span> Create Hospital User</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button" routerLink="/searchUser">
+            <mat-icon>search</mat-icon>
+            <span> Search User</span>
+          </button>
+          <mat-divider></mat-divider>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <div class="content1">
+              <router-outlet></router-outlet>
+              <img class="img" src="assets/profile.png">
+    <mat-card style="flex: 1 1 auto;" class="example-card2">
+        <mat-card-content>
+            <h4 class="c2" align="center"><b>Admin Profile</b></h4><br/>
+            
+            <span>Name : Nathaniel Richards</span><br/><br/>
+            <span>EmailId  : admin@gmail.com</span><br/><br/>
+            <span>Role : Admin</span><br/><br/>
+            <span>Employee Id  : 15000</span><br/><br/>
+            <span>Contact Number : 43591709</span>
+        </mat-card-content>
+    </mat-card>
+  
+          
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>

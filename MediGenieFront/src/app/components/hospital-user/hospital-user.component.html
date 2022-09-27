@@ -1,0 +1,81 @@
+<mat-card class="card">
+    <div class="container" color="accent">
+            <h3 style="text-decoration: underline;"><strong>Register</strong></h3>
+            <div>
+                <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>First Name</mat-label>
+                    <input matInput autocomplete="off" [(ngModel)]="form.firstName"/>
+                    <mat-error>First Name cannot be empty</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput required="true" [(ngModel)]="form.lastName" autocomplete="off" />
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-radio-group [(ngModel)]="form.gender" style="width: 240px;" class="example-radio">
+                    <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
+                    <mat-radio-button value="Female">Female &nbsp;</mat-radio-button>
+                    <mat-radio-button value="Others">Others &nbsp;</mat-radio-button>
+                    
+                </mat-radio-group>
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="form.dateOfBirth">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+            </div>
+
+            <div>
+                <mat-form-field appearance="fill" class="example-email" style="width: 240px;">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput type="email" [(ngModel)]="form.email" placeholder="Ex. pat@example.com"
+                        autocomplete="off">
+                    <mat-icon matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="example-mobile" style="width: 240px;">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="tel" matInput placeholder="555-555-1234" required="true" autocomplete="off"
+                    [(ngModel)]="form.mobileNumber">
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="fill" class="example-password">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+                       autocomplete="off" [(ngModel)]="form.password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field> 
+
+                  <mat-form-field appearance="fill" class="example-confirmPassword">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+                       autocomplete="off" [(ngModel)]="confirmPassword">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field> 
+
+            </div>
+            <button mat-raised-button color="primary" type="submit" (click)="saveUser()">Submit</button>&nbsp;&nbsp;
+        <div class="alert alert-success" *ngIf="!isPasswordMatched">
+            Password and Confirm Password must be same. Please check again.
+        </div>
+        <div class="alert alert-success" *ngIf="isRegistrationSuccess">
+            Registration Successful! Please login for Consultation!
+        </div>
+        <div class="alert alert-warning" *ngIf="isRegistrationFailed">
+            {{errorMessage}}
+        </div>
+    </div>
+</mat-card> 

@@ -1,0 +1,90 @@
+<div class="logo">
+    <mat-card class="card">
+        <div class="container" color="accent">
+            <h3 style="text-decoration: underline;"><strong>Register</strong></h3>
+            <div>
+                <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>First Name</mat-label>
+                    <mat-icon matPrefix>account_circle</mat-icon>
+                    <input matInput name="firstName" autocomplete="off" [(ngModel)]="form.firstName" minlength="3"
+                        required #fname="ngModel" />
+                    <mat-error *ngIf="fname.errors?.['required']">First Name cannot be empty</mat-error>
+                    <mat-error *ngIf="fname.errors?.['minlength']">Please don’t use abbreviations</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Last Name</mat-label>
+                    <mat-icon matPrefix>account_circle</mat-icon>
+
+                    <input matInput [(ngModel)]="form.lastName" autocomplete="off" minlength="3" required
+                        #lname="ngModel" [attr.disabled]="fname.hasError('required') ? true : null" />
+                    <mat-error *ngIf="lname.errors?.['required']">Last Name cannot be empty</mat-error>
+                    <mat-error *ngIf="lname.errors?.['minlength']">Please don’t use abbreviations</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-radio-group [(ngModel)]="form.gender" style="width: 240px;" class="example-radio">
+                    <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
+                    <mat-radio-button value="Female">Female &nbsp;</mat-radio-button>
+                    <mat-radio-button value="Others">Others &nbsp;</mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" [max]="today" [(ngModel)]="form.dateOfBirth" required
+                        #date="ngModel">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>Please select the date</mat-error>
+                </mat-form-field>
+
+            </div>
+
+            <div>
+                <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Email</mat-label>
+                    <mat-icon matPrefix>mail</mat-icon>
+                    <input email matInput type="email" [(ngModel)]="form.email" placeholder="Ex. pat@example.com"
+                        autocomplete="off" required #email="ngModel">
+                    <mat-error>Please enter the valid email</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Mobile Number</mat-label>
+                    <mat-icon matPrefix>call</mat-icon>
+                    <input type="tel" minlength="10" maxlength="10" matInput placeholder="555-555-1234"
+                        autocomplete="off" [(ngModel)]="form.mobileNumber" required #mobile="ngModel">
+                    <mat-error *ngIf="mobile.errors?.['required']">Mobile number cannot be empty</mat-error>
+                    <mat-error *ngIf="mobile.errors?.['minlength']">Please enter the valid mobile number</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Password</mat-label>
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+                        autocomplete="off" [(ngModel)]="form.password" required #password="ngModel">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error>Please enter the password</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" style="width: 240px;">
+                    <mat-label>Confirm Password</mat-label>
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <input matInput placeholder="Enter your password" [type]="conHide ? 'password' : 'text'"
+                        autocomplete="off" [(ngModel)]="confirmPassword" required #conPassword="ngModel">
+                    <button mat-icon-button matSuffix (click)="conHide = !conHide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="conHide">
+                        <mat-icon>{{conHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error>Please enter the confirm password</mat-error>
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="primary" type="submit" (click)="saveUser()">Submit</button>
+        </div>
+    </mat-card>
+</div>

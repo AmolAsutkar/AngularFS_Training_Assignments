@@ -1,0 +1,165 @@
+<!--<h3 align="center">My Appoinments</h3> -->
+
+<!--<h3 align="center" style="text-decoration: underline;"><strong>My Appoinments</strong></h3>
+
+<hr/>
+<table  mat-table class="lessons-table mat-elevation-z8"  [dataSource]="Viewappoinment" class="mat-elevation-z8" style="margin:20px;width:1300px;">
+
+
+<ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>Appoinment Id</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+</ng-container>
+
+
+<ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+    <mat-cell class="b" *matCellDef="let item">{{item.firstname}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+    <mat-cell class="c" *matCellDef="let item">{{item.lastname}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="physican">
+    <mat-header-cell *matHeaderCellDef>Physican Name</mat-header-cell>
+    <mat-cell class="e" *matCellDef="let item">{{item.physicianname}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="meetingtitle">
+    <mat-header-cell *matHeaderCellDef>Meeting Title </mat-header-cell>
+    <mat-cell class="f" *matCellDef="let item">{{item.meetingtitle}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell class="d" *matCellDef="let item">{{item.description}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="appoinmentdate">
+    <mat-header-cell *matHeaderCellDef>Appoinment Time </mat-header-cell>
+    <mat-cell class="f" *matCellDef="let item">{{item.appoinmentDate}}</mat-cell>
+  </ng-container> 
+
+
+<ng-container matColumnDef="time">
+    <mat-header-cell *matHeaderCellDef>Appoinment Time </mat-header-cell>
+    <mat-cell class="f" *matCellDef="let item">{{item.time}}</mat-cell>
+  </ng-container> 
+
+<!---
+<ng-container matColumnDef="actions">
+    <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
+    <mat-cell *matCellDef="let row" >
+         <button mat-button >Edit</button>
+    </mat-cell>
+  </ng-container>
+-->
+  <!--  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+ </table>
+
+<hr/>
+
+<router-outlet></router-outlet>
+-->
+<mat-sidenav-container color="primary">
+    
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+  
+      <button mat-button class="menu-button" routerLink="/addDetails">
+        <mat-icon>account_circle</mat-icon>
+        <span>Add Details</span>
+      </button>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button"  routerLink="/bookAppointment">
+        <mat-icon>personal_injury</mat-icon>
+        <span> Book Appointment</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button"  routerLink="/bookAppointment">
+        <mat-icon>local_hospital</mat-icon>
+        <span> Cancelled Appointments</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/visitDetails">
+        <mat-icon>local_hospital</mat-icon>
+        <span> Visit Details</span>
+      </button>
+      <mat-divider></mat-divider>
+      
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content1">
+          <router-outlet></router-outlet>
+          
+         <!-- <table  mat-table class="lessons-table mat-elevation-z8"  [dataSource]="Viewappoinment" class="mat-elevation-z8" style="margin:20px;width:1300px;"> -->
+
+            <table mat-table class="lessons-table mat-elevation-z8" [dataSource]="Viewappoinment" class="mat-elevation-z8" style="margin:20px;width:1000px;">
+
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef>Appoinment Id</mat-header-cell>
+                <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+            </ng-container>
+            
+            
+            <ng-container matColumnDef="firstName">
+                <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+                <mat-cell class="b" *matCellDef="let item">{{item.firstname}}</mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="lastName">
+                <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+                <mat-cell class="c" *matCellDef="let item">{{item.lastname}}</mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="physican">
+                <mat-header-cell *matHeaderCellDef>Physican Name</mat-header-cell>
+                <mat-cell class="e" *matCellDef="let item">{{item.physicianname}}</mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="meetingtitle">
+                <mat-header-cell *matHeaderCellDef>Meeting Title </mat-header-cell>
+                <mat-cell class="f" *matCellDef="let item">{{item.meetingtitle}}</mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+                <mat-cell class="d" *matCellDef="let item">{{item.description}}</mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="appoinmentdate">
+                <mat-header-cell *matHeaderCellDef>Appoinment Date </mat-header-cell>
+                <mat-cell class="f" *matCellDef="let item">{{item.appoinmentDate|date}}</mat-cell>
+              </ng-container> 
+            
+            
+            <ng-container matColumnDef="time">
+                <mat-header-cell *matHeaderCellDef>Appoinment Time </mat-header-cell>
+                <mat-cell class="f" *matCellDef="let item">{{item.time}}</mat-cell>
+              </ng-container> 
+            
+            
+            <ng-container matColumnDef="actions">
+                <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
+                <mat-cell *matCellDef="let row" >
+                     <button mat-button (click)="DeleteAppoinment()">Delete</button>
+                </mat-cell>
+              </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+            
+             </table>
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

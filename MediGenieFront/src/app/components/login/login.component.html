@@ -1,0 +1,33 @@
+<div class="logo">
+    <mat-card class="card">
+    <h3 style="text-decoration: underline;"><strong>Login</strong></h3>
+    <div>
+      <mat-form-field appearance="fill" style="width: 240px;" >
+        <mat-label>Email</mat-label>
+        <mat-icon matPrefix>account_circle</mat-icon>
+        <input matInput placeholder="Enter your email" [(ngModel)]="form.email" autocomplete="off" />
+        <mat-error></mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="fill" style="width: 240px;">
+        <mat-label>Password</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+           autocomplete="off" [(ngModel)]="form.password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field> 
+    </div>
+    <button type="submit" mat-raised-button color="primary" (click)="login_submit()">Login</button>&nbsp;&nbsp;
+    <br /><br />
+    <!-- <div style="color: red;" class="alert alert-warning" *ngIf="isLoginFailed">
+      {{errorMessage}}
+      <div *ngIf="attempsremaining < 3">
+        2-{{attempsremaining}} attempts remaining
+      </div>
+    </div> -->
+    <a routerLink="/forgot" style="text-decoration: none;">Forgot Password?</a>
+  </mat-card>
+  </div>

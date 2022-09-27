@@ -1,0 +1,61 @@
+
+
+
+  <mat-sidenav-container color="primary">
+    
+   
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+        <button mat-button class="menu-button" routerLink="/nurseProfile">
+            <mat-icon>account_circle</mat-icon>
+            <span>Profile</span>
+          </button>
+       
+          <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="/nurseAppointments">
+            <mat-icon>edit</mat-icon>
+            <span>All Appointments</span>
+          </button>
+      
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button"  routerLink="/nurseInbox">
+            <mat-icon>email</mat-icon>
+            <span> Inbox</span>
+          </button>
+          <mat-divider></mat-divider>
+      
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="logo">
+      <div class="content1">
+          <router-outlet></router-outlet>
+          
+          <img class="img" src="assets/profile.png">
+          <mat-card class="card" style="flex: 1 1 auto;" class="example-card2">
+            <div *ngIf="role == 'ROLE_PATIENT' ">
+              <h3>Patient Profile</h3>
+            </div>
+            <div *ngIf="role == 'ROLE_PHYSICIAN' ">
+              <h3>Physician Profile</h3>
+            </div>
+            <div *ngIf="role == 'ROLE_NURSE' ">
+              <h3>Nurse Profile</h3>
+            </div>
+            <div *ngIf="role == 'ROLE_ADMIN' ">
+              <h3>#role Profile</h3>
+            </div>
+            <div>
+                
+                <p>User Id: {{currentUser.id}}</p>
+              <p>Full Name : {{currentUser.firstName +' '+ currentUser.lastName}}</p>
+              <p>Mobile Number: {{currentUser.mobileNumber}}</p>
+              <p>Email: {{currentUser.email}}</p>
+              <p>DOB: {{currentUser.dateOfBirth}}</p>
+            </div>
+          </mat-card>
+      </div>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>

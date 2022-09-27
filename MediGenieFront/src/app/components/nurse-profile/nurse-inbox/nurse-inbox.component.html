@@ -1,0 +1,71 @@
+
+
+<mat-sidenav-container color="primary">
+    
+   
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+      <button mat-button class="menu-button" routerLink="/nurseProfile">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+      </button>
+   
+      <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button" routerLink="/nurseAppointments">
+          <mat-icon>account_circle</mat-icon>
+          <span>All Appointments</span>
+        </button>
+    
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button"  routerLink="/physicianInbox">
+          <mat-icon>email</mat-icon>
+          <span> Inbox</span>
+        </button>
+        <mat-divider></mat-divider>
+      
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content1">
+          <router-outlet></router-outlet>
+  
+          <mat-card class="card">
+            <div class="container" color="accent">
+                    <h3 style="text-decoration: underline;" align="center"><strong>Send Message</strong></h3>
+                    <div>
+          
+                      
+                      <mat-form-field *ngIf = "user" style="width: 450px; margin-left:30px;">
+                        
+                        <mat-select  formControlName="firstName"  placeholder="Select 
+                        firstName">
+                          <mat-option *ngFor="let item of user" 
+                      [value]="item.firstName">
+                            {{item.title}} {{item.firstName}} {{item.lastName}}
+                          </mat-option>
+                       </mat-select>
+                     </mat-form-field>
+          
+                     <br/><br/>
+                        
+                        
+                        <mat-form-field style="width: 450px; margin-left:30px;" class="message">
+                            <mat-label>Message</mat-label>
+                            <input matInput type="text" formControlName="message" autocomplete="off" />
+                        </mat-form-field>
+                    </div>
+          
+                    <button mat-raised-button style="margin-left: 218px;margin-top: 30px;" color="primary" type="submit" (click)="saveMessage()">Submit</button>&nbsp;&nbsp;
+                
+                
+            </div>
+          </mat-card> 
+          
+  
+  
+  
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

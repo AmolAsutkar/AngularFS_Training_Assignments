@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-icon>local_hospital</mat-icon><h1 align="center">  CT HOSPITAL </h1>
+  <span class="example-spacer"></span>
+  <div class="example-button-row">
+    <button mat-icon-button [routerLink]="'/'">
+      <mat-icon>home</mat-icon>
+      <mat-label>Home</mat-label>
+    </button>
+    <button mat-icon-button [routerLink]="'/about'">
+      <mat-icon>info</mat-icon>
+      <mat-label>About</mat-label>
+    </button>
+    <button mat-icon-button [routerLink]="'/login'">
+      <mat-icon>login</mat-icon>
+      <mat-label>Login</mat-label>
+    </button>
+    <button mat-icon-button [routerLink]="'/signup'">
+      <mat-label>Register</mat-label>
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu" *ngIf="islogged()"><mat-icon>person</mat-icon>Profile</button>
+
+    <div class="topRight">
+      <mat-menu #menu="matMenu" class="example-container">
+        <button mat-icon-button [routerLink]="'/adminProfile'">
+          <mat-icon>person_outline</mat-icon>
+          My Profile
+        </button><br/>
+    <button mat-button (click)=logout()><mat-icon>arrow_back</mat-icon>Logout</button>
+      </mat-menu></div>
+   
+    
+  </div>
+</mat-toolbar>
+
+

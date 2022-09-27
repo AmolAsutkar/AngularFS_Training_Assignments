@@ -1,0 +1,32 @@
+<mat-card class="card">
+  
+  <div *ngIf="role == 'ROLE_PATIENT' ">
+    <h3>Patient Profile</h3>
+  </div>
+  <div *ngIf="role == 'ROLE_PHYSICIAN' ">
+    <h3>Physician Profile</h3>
+  </div>
+  <div *ngIf="role == 'ROLE_NURSE' ">
+    <h3>Nurse Profile</h3>
+  </div>
+  <div *ngIf="role == 'ROLE_ADMIN' ">
+    <h3>#role Profile</h3>
+  </div>
+  <div>
+    <p>Full Name : {{currentUser.firstName +' '+ currentUser.lastName}}</p>
+    <p>Mobile Number: {{currentUser.mobileNumber}}</p>
+    <p>Email: {{currentUser.email}}</p>
+    <p>DOB: {{currentUser.dateOfBirth}}</p>
+    <p>Patient ID: {{currentUser.employeeID}}</p>
+  </div>
+
+  <button mat-button class="menu-button"  routerLink="/bookappoinment">
+       <!--<mat-icon>personal_injury</mat-icon> --> 
+    <span> Book Appointment</span>
+  </button>
+
+  <button mat-button class="menu-button"  routerLink="/viewdoctorsappoinment">
+   <!--<mat-icon>personal_injury</mat-icon> --> 
+   <span> View Appointment</span>
+  </button>
+</mat-card>

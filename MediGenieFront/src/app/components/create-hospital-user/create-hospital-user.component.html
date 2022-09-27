@@ -1,0 +1,138 @@
+<hr/>
+
+   
+
+
+     
+  <mat-sidenav-container color="primary">
+    
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+      <h4 class="name">Nathaniel Richards</h4>
+      <p class="designation">Admin, CT Hospital</p>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button" routerLink="/adminProfile">
+        <mat-icon>account_circle</mat-icon>
+        <span> Profile</span>
+      </button>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button"  routerLink="/getPatient">
+        <mat-icon>personal_injury</mat-icon>
+        <span> Patients</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/getPhysician">
+        <mat-icon>local_hospital</mat-icon>
+        <span> Physicians</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/getNurse">
+        <mat-icon>medication</mat-icon>
+        <span> Nurses</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/createUser">
+        <mat-icon>person_add</mat-icon>
+        <span> Create Hospital User</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/searchUser">
+        <mat-icon>search</mat-icon>
+        <span> Search User</span>
+      </button>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content1">
+          <router-outlet></router-outlet>
+          <mat-card class="card">
+            <div class="container1" color="accent">
+            <form>
+              <h2>Create Hospital User</h2>
+              <mat-radio-group style="width: 240px;" class="example-radio">
+                <mat-radio-button value="Mr">  Mr. </mat-radio-button>
+                <mat-radio-button value="Ms">  Ms. </mat-radio-button>
+                <mat-radio-button value="Mrs">   Others   </mat-radio-button>
+            </mat-radio-group><br/><br/>
+      
+                  <div>
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                      <mat-label>First Name</mat-label>
+                      <div [formGroup]="myGroup">
+                        <input type="text" matInput formControlName="firstName" class="form-control" maxlength="20">
+                      </div>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                      <mat-label>Last Name</mat-label>
+                      <div [formGroup]="myGroup">
+                        <input type="text" matInput formControlName="lastName" class="form-control" maxlength="20">
+                      </div>
+                  </mat-form-field>
+                  </div>
+      
+                <div>
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Email Id</mat-label>
+                    <div [formGroup]="myGroup">
+                    <input type="text" matInput formControlName="email" placeholder="Ex. pat@example.com" class="form-control">
+                    </div>
+                  </mat-form-field>
+                
+      
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Date of Birth</mat-label>
+                    <div [formGroup]="myGroup">
+                      <input matInput formControlName="dateOfBirth" [matDatepicker]="dp1"  >
+                      <mat-datepicker-toggle matSuffix [for]="dp1"><mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon></mat-datepicker-toggle>
+                      <mat-datepicker #dp1></mat-datepicker>
+                  
+                    </div>
+                </mat-form-field>
+                  </div>
+      
+                  <div>
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Status</mat-label>
+                    <div [formGroup]="myGroup">
+                    <input type="text" matInput formControlName="status" placeholder="Ex. ACTIVE" class="form-control">
+                    </div>
+                  </mat-form-field>
+      
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>Mobile</mat-label>
+                    <div [formGroup]="myGroup">
+                    <input type="text" matInput formControlName="mobileNumber" placeholder="Ex. 9876753224" class="form-control">
+                    </div>
+                  </mat-form-field>
+                  </div>
+      
+                  <div>
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>EMployee Id</mat-label>
+                    <div [formGroup]="myGroup">
+                    <input type="text" matInput formControlName="employeeID" placeholder="Ex. 150001" class="form-control">
+                    </div>
+                  </mat-form-field>
+      
+      
+                  <mat-form-field appearance="fill" class="example-row" style="width: 240px;">
+                    <mat-label>role</mat-label>
+                    <div [formGroup]="myGroup">
+                    <input type="text" matInput formControlName="role" placeholder="Ex. ROLE_PHYSICIAN" class="form-control">
+                    </div>
+                  </mat-form-field>
+                  </div>
+      
+                  <button mat-button class="mat-button1" color="primary" (click)="submit()">Create</button>
+                </form>
+            </div>
+          </mat-card>
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

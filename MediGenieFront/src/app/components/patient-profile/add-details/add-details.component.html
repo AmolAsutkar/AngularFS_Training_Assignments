@@ -1,0 +1,210 @@
+<hr/>
+
+   
+
+
+     
+  <mat-sidenav-container color="primary">
+    
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+      <button mat-button class="menu-button" routerLink="/addDetails">
+        <mat-icon>account_circle</mat-icon>
+        <span>Add Details</span>
+      </button>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button"  routerLink="/bookAppointment">
+        <mat-icon>personal_injury</mat-icon>
+        <span> Book Appointment</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button"  routerLink="/bookAppointment">
+        <mat-icon>local_hospital</mat-icon>
+        <span> Cancelled Appointments</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button class="menu-button" routerLink="/visitDetails">
+        <mat-icon>local_hospital</mat-icon>
+        <span> Visit Details</span>
+      </button>
+      <mat-divider></mat-divider>
+      
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content1">
+          <router-outlet></router-outlet>
+          <mat-stepper headerPosition="top" #stepper class = "nav" style = "min-width: 1050px; margin-left: 25%; margin-bottom: 10%;max-height: 380px;">
+            <mat-card class = "card" style="max-height: 220px; box-sizing: border-box ;background-color: #e5e4e2;">
+            <mat-step [stepControl]="firstFormGroup">
+              <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel >Personal Details</ng-template>
+               
+                <div class="example-container" >
+                    <mat-form-field appearance="standard" style = "width:40%">
+                        <mat-label> First Name</mat-label>
+                        <mat-icon matPrefix>account_circle</mat-icon>
+                        <input matInput placeholder="First Name" length ="10">
+                        
+                        <mat-hint >Upto 30 characters</mat-hint>
+                      </mat-form-field>
+                  
+                    <mat-form-field appearance="fill" class = "fields" style = "width:40%">
+                      
+                        <input matInput placeholder="Home Address">
+                      
+                    </mat-form-field>
+                  </div>
+                  
+                <p>
+                    
+                   
+                
+                  </p>
+                  <div class="example-container">
+                    <mat-form-field appearance="standard" class = "field" style = "width:40%">
+                      <mat-label>Last Name</mat-label>
+                      <input matInput placeholder="Last Name">
+                      <mat-icon matPrefix>account_circle</mat-icon>
+                      <mat-hint>Upto 30 characters</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="standard" class = "field" style = "width:40%">
+                        
+                        <input matInput placeholder="Languages Known">
+                        
+                      </mat-form-field>
+                  
+                    </div>
+                    <div class="example-container">
+                    <mat-form-field appearance="standard" class = "field" style = "width:40%">
+                        <mat-label>Phone</mat-label>
+                        <input matInput placeholder="Enter your number">
+                        <mat-icon matPrefix>phone</mat-icon>
+                        <mat-hint>Numbers only only</mat-hint>
+                      </mat-form-field>
+                   
+                
+                  
+                    <mat-form-field appearance="standard" class = "field" style = "width:40%">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  
+                  </div>
+                  
+                  <div>
+                    
+                    <button mat-button matStepperNext style="color: blue;">Next</button>
+                  </div>
+                
+              </form>
+            </mat-step>
+        </mat-card>
+        <mat-card class = "card" style="max-height: 220px; box-sizing: border-box ;background-color: #e5e4e2;">
+            <mat-step [stepControl]="secondFormGroup" optional>
+               
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Emergency Contact</ng-template>
+                <div class="example-container" >
+                    <mat-form-field appearance="standard" style="width: 40%;">
+                        <mat-label> First Name</mat-label>
+                        <mat-icon matPrefix>account_circle</mat-icon>
+                        <input matInput placeholder="First Name">
+                        
+                        <mat-hint >Upto 30 characters</mat-hint>
+                      </mat-form-field>
+                  
+                   
+                      <mat-form-field appearance="standard" class = "fields" style="width: 40%;">
+                        <mat-label>Phone</mat-label>
+                        <input matInput placeholder="Enter your number">
+                        <mat-icon matPrefix>phone</mat-icon>
+                        <mat-hint>Number only </mat-hint>
+                      </mat-form-field>
+                  </div>
+                <p>
+                    
+                   
+                
+                  </p>
+                  <div class="example-container" >
+                    <mat-form-field appearance="standard"  style="width: 40%;">
+                      <mat-label>Last Name</mat-label>
+                      <input matInput placeholder="Last Name">
+                      <mat-icon matPrefix>account_circle</mat-icon>
+                      <mat-hint>Upto 30 characters only</mat-hint>
+                    </mat-form-field>
+                  
+                    <mat-form-field appearance="fill" class = "fields" style="width: 40%;">
+                      
+                        <input matInput placeholder="Home Address">
+                      
+                    </mat-form-field>
+                  
+                   
+                    </div>
+                
+                  <p>
+                    <mat-form-field appearance="standard" style="width: 40%;">
+                        <mat-label>Enter email</mat-label>
+                        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  </p>
+                <div>
+                  <button mat-button matStepperPrevious  style="color: blue;">Back</button>
+                  <button mat-button matStepperNext  style="color: blue;">Next</button>
+                </div>
+              </form>
+            </mat-step>
+        </mat-card>
+            <mat-step>
+              <ng-template matStepLabel>Allergy</ng-template>
+              <p>
+                <mat-form-field appearance="standard" style="width: 40%;">
+                  <mat-label>Select me</mat-label>
+                  <mat-select>
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                  <mat-hint align="end">Food Allergy</mat-hint>
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field appearance="standard" style="width: 40%;">
+                  <mat-label>Select me</mat-label>
+                  <mat-select>
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                  <mat-hint align="end">Alergy</mat-hint>
+                </mat-form-field>
+              </p>
+        
+        
+        
+              <div>
+                <button mat-button matStepperPrevious  style="color: blue;">Back</button>
+                <button mat-button matStepperNext  style="color: blue;">Next</button>
+                
+              </div>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Preview</ng-template>
+             
+        
+        
+        
+              <div>
+                <button mat-raised-button color= "warn" style="margin-left: 50%;align-self: baseline;" (click)="stepper.reset();" >Reset</button>
+               
+                <button mat-raised-button color= "primary" style="margin-left: 65%; align-self: baseline;">Submit</button>
+              </div>
+            </mat-step>
+        
+          </mat-stepper>
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

@@ -1,0 +1,38 @@
+.logo {
+    background-image:url('/assets/images/home.png');
+    height: 593px;
+    width: 1366px;
+    padding: 0px;
+    // display: block;
+    margin: 0 auto;
+}
+
+.class1{
+    margin-top:400px
+}
+
+.outline {
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+
+}
+
+.example-card2{
+    top: 120px;
+    margin-left: 800px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0);
+}
+mat-card{
+    color: black;
+    margin-left: 200px;
+}
+
+.mat-button{
+    margin-top: 30px;
+  width: 190px;
+  color: white;
+  height: 40px;
+  background-color: #3F51B5;
+  }

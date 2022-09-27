@@ -1,0 +1,74 @@
+<mat-sidenav-container color="primary">
+    
+   
+    <mat-sidenav #sidenav="matSidenav" mode="over" opened>
+  
+      <button mat-button class="menu-button" routerLink="/nurseProfile">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+      </button>
+   
+      <mat-divider></mat-divider>
+       
+  
+        <button mat-button class="menu-button" routerLink="/nurseAppointments">
+            <mat-icon>account_circle</mat-icon>
+            <span>All Appointments</span>
+          </button>
+      
+          <mat-divider></mat-divider>
+          <button mat-button class="menu-button"  routerLink="/nurseInbox">
+            <mat-icon>email</mat-icon>
+            <span> Inbox</span>
+          </button>
+          <mat-divider></mat-divider>
+      
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content1">
+          <router-outlet></router-outlet>
+          <table mat-table class="lessons-table mat-elevation-z8"  class="mat-elevation-z8" style="margin:20px;width:1000px;">
+
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+            </ng-container>
+        
+            <ng-container matColumnDef="patientName">
+                <mat-header-cell *matHeaderCellDef>Patient Name</mat-header-cell>
+             </ng-container>
+        
+            
+            <ng-container matColumnDef="meetingTitle">
+      <mat-header-cell *matHeaderCellDef>Meeting Title</mat-header-cell>
+        </ng-container>
+  
+
+        
+            <ng-container matColumnDef="Date">
+                <mat-header-cell *matHeaderCellDef>Appointment Date  </mat-header-cell>
+            </ng-container>
+            <ng-container matColumnDef="Time">
+                <mat-header-cell *matHeaderCellDef>Time  </mat-header-cell>
+            </ng-container>
+        
+            <<ng-container matColumnDef="physicianName">
+                <mat-header-cell *matHeaderCellDef>physicianName </mat-header-cell>
+            </ng-container>
+        
+        
+            <ng-container matColumnDef="actions">
+                <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
+                <mat-cell *matCellDef="let item" >
+                    <button mat-button class="block" (click)="add()" onclick="window.location.reload()" color="primary">Update</button>
+                    
+                </mat-cell>
+              </ng-container>
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        
+         </table>
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
